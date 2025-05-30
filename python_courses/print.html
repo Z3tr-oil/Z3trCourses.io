@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Print Statement</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .course-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0 10px 0;
+        }
+
+        .course-nav a {
+            background: #141313;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid #433c39;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .course-nav a:hover {
+            background: #433c39;
+            color: #fff;
+        }
+
+        pre {
+            background: #222020;
+            color: #b5e853;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .tip {
+            background: #252120;
+            color: #b5e853;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .quiz-section {
+            margin-top: 40px;
+            border: 1px solid #433c39;
+            border-radius: 6px;
+            padding: 20px;
+            background: #181818;
+        }
+
+        .quiz-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .quiz-q {
+            margin-bottom: 18px;
+        }
+
+        .quiz-q label {
+            margin-left: 8px;
+        }
+
+        .quiz-result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .quiz-submit-btn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: #141313;
+            color: #fff;
+            border: 1px solid #433c39;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./../controllert.js"></script>
+    <!--side bar --------------------------------------->
+    <div class="nav hidden" id="sidebar">
+        <a href="./../index.html" class="pages">
+            <div class="pagediv">
+                <h1>Home</h1>
+            </div>
+        </a>
+        <a href="./../courses.html" class="pages">
+            <div class="pagediv">
+                <h1>courses</h1>
+            </div>
+        </a>
+    </div>
+    <div class="data" style="margin-top: 40px; border: 1px; border-style: ridge;">
+        <h1 style="text-align:center;">Python Print Statement</h1>
+        <p style="text-align:center;">How to display output in Python</p>
+        <hr>
+        <h2>What is <code>print()</code>?</h2>
+        <p>
+            The <code>print()</code> function is used to display output to the screen. It can print strings, numbers,
+            variables, and even the results of expressions.
+        </p>
+        <h3>Basic Usage</h3>
+        <pre><code>
+print("Hello, World!")
+print(42)
+print(3.14)
+        </code></pre>
+        <div class="tip"><b>Tip:</b> You can print multiple items by separating them with commas.</div>
+        <pre><code>
+name = "Alice"
+age = 30
+print("Name:", name, "Age:", age)
+        </code></pre>
+        <h3>Printing Expressions</h3>
+        <pre><code>
+print(2 + 3)         # 5
+print("Sum:", 2 + 3) # Sum: 5
+        </code></pre>
+        <h3>Formatting Output</h3>
+        <ul>
+            <li><b>f-strings (Python 3.6+):</b></li>
+        </ul>
+        <pre><code>
+name = "Bob"
+score = 95
+print(f"{name} scored {score} points.")
+        </code></pre>
+        <ul>
+            <li><b>Using <code>.format()</code>:</b></li>
+        </ul>
+        <pre><code>
+print("{} scored {} points.".format(name, score))
+        </code></pre>
+        <h3>Printing Without Newline</h3>
+        <p>By default, <code>print()</code> adds a newline at the end. Use <code>end=""</code> to change this:</p>
+        <pre><code>
+for i in range(3):
+    print(i, end=" ")
+# Output: 0 1 2
+        </code></pre>
+        <h3>Printing Special Characters</h3>
+        <pre><code>
+print("Line1\nLine2")   # \n is a newline
+print("Tab\tSpace")     # \t is a tab
+        </code></pre>
+        <h3>Escape Characters</h3>
+        <pre><code>
+print("He said \"Hello\"")  # Prints: He said "Hello"
+        </code></pre>
+        <hr>
+        <div class="course-nav">
+            <span></span>
+            <a href="variables.html">Next &rarr;</a>
+        </div>
+        <!-- Quiz Section -->
+        <div class="quiz-section">
+            <h2>Quick Quiz: Python Print</h2>
+            <form id="printQuizForm">
+                <div class="quiz-q">
+                    <div>1. What does <code>print("Hello")</code> do?</div>
+                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Takes input from user</label><br>
+                    <input type="radio" name="q1" value="b" id="q1b"> <label for="q1b">Displays Hello on screen</label><br>
+                    <input type="radio" name="q1" value="c" id="q1c"> <label for="q1c">Saves Hello to a file</label><br>
+                    <input type="radio" name="q1" value="d" id="q1d"> <label for="q1d">Nothing</label>
+                </div>
+                <div class="quiz-q">
+                    <div>2. What is the output of <code>print(2 + 3)</code>?</div>
+                    <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">23</label><br>
+                    <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">5</label><br>
+                    <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">2+3</label><br>
+                    <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">Error</label>
+                </div>
+                <div class="quiz-q">
+                    <div>3. Which prints <code>Name: Alice Age: 20</code>?</div>
+                    <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">print("Name:", "Alice", "Age:", 20)</label><br>
+                    <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">print("Name: Alice Age: 20")</label><br>
+                    <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">Both a and b</label><br>
+                    <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">None</label>
+                </div>
+                <div class="quiz-q">
+                    <div>4. How do you print without a newline?</div>
+                    <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">print("hi", end="")</label><br>
+                    <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">print("hi", stop="")</label><br>
+                    <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">print("hi", newline=False)</label><br>
+                    <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">print("hi")</label>
+                </div>
+                <div class="quiz-q">
+                    <div>5. What does <code>print("A\\nB")</code> output?</div>
+                    <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">A B</label><br>
+                    <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">A\nB</label><br>
+                    <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">A<br>B</label><br>
+                    <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">A (newline) B</label>
+                </div>
+                <button type="button" class="quiz-submit-btn" onclick="gradePrintQuiz()">Submit Answers</button>
+                <div id="quizResultPrint" class="quiz-result"></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // filepath: /home/z3tr/Documents/pwa/python_courses/print.html
+        function gradePrintQuiz() {
+            // correct: q1=b, q2=b, q3=c, q4=a, q5=d
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'b') score++;
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'b') score++;
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'c') score++;
+            if (document.querySelector('input[name="q4"]:checked')?.value === 'a') score++;
+            if (document.querySelector('input[name="q5"]:checked')?.value === 'd') score++;
+            document.getElementById('quizResultPrint').textContent = `Your score: ${score} / 5`;
+        }
+    </script>
+</body>
+
+</html>

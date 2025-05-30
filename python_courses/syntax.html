@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Syntax</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .course-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0 10px 0;
+        }
+
+        .course-nav a {
+            background: #141313;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid #433c39;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .course-nav a:hover {
+            background: #433c39;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./../controllert.js"></script>
+    <!--side bar --------------------------------------->
+    <div class="nav hidden" id="sidebar">
+        <a href="./../index.html" class="pages">
+            <div class="pagediv">
+                <h1>Home</h1>
+            </div>
+        </a>
+        <a href="./../courses.html" class="pages">
+            <div class="pagediv">
+                <h1>courses</h1>
+            </div>
+        </a>
+    </div>
+    <div class="data" style="margin-top: 40px; border: 1px; border-style: ridge;">
+        <h1 style="text-align:center;">Python Syntax</h1>
+        <p style="text-align:center;">Learn about the basic syntax of Python programming language.</p>
+        <hr>
+        <h2>Python Syntax Overview</h2>
+        <ul>
+            <li>Python uses indentation (whitespace) to define code blocks, not braces <code>{}</code>.</li>
+            <li>Statements end with a newline, not a semicolon <code>;</code> (though semicolons are allowed).</li>
+            <li>Case sensitive: <code>Variable</code> and <code>variable</code> are different.</li>
+            <li>Comments start with <code>#</code>.</li>
+            <li>Strings can be enclosed in single (<code>'</code>) or double (<code>"</code>) quotes.</li>
+        </ul>
+        <h2>Example</h2>
+        <pre><code>
+# This is a comment
+print("Hello, World!")
+        </code></pre>
+        <hr>
+        <div class="course-nav">
+            <a href="intro.html">&larr; Previous</a>
+            <a href="variables.html">Next &rarr;</a>
+        </div>
+    </div>
+</body>
+
+</html>

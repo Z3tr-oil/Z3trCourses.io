@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <script src="controllert.js"></script>
+    <script src="login.js"></script>
+
+    <!--side bar --------------------------------------->
+    <div class="nav hidden" id="sidebar">
+        <a href="index.html" class="pages">
+            <div class="pagediv">
+                <h1>Home</h1>
+            </div>
+        </a>
+
+    </div>
+    <!--end side bar ---------------------------------->
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input class="loginInput" type="text" id="username" placeholder="Username" required>
+            <input class="loginInput" type="password" id="password" placeholder="Password" required>
+            <div>
+                <button type="submit" onclick="login()">Login</button>
+            </div>
+            <p id="error" class="error-message"></p>
+        </form>
+    </div>
+
+</body>
+
+</html>

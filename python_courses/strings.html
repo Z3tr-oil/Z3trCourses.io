@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Strings</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .course-nav { display: flex; justify-content: space-between; margin: 30px 0 10px 0; }
+        .course-nav a { background: #141313; color: white; padding: 10px 24px; border-radius: 4px; text-decoration: none; border: 1px solid #433c39; font-weight: bold; transition: background 0.2s; }
+        .course-nav a:hover { background: #433c39; color: #fff; }
+        pre { background: #222020; color: #b5e853; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .tip { background: #252120; color: #b5e853; padding: 8px 12px; border-radius: 4px; margin: 10px 0; }
+        .quiz-section {
+            margin-top: 40px;
+            border: 1px solid #433c39;
+            border-radius: 6px;
+            padding: 20px;
+            background: #181818;
+        }
+        .quiz-section h2 { margin-bottom: 10px; }
+        .quiz-q { margin-bottom: 18px; }
+        .quiz-q label { margin-left: 8px; }
+        .quiz-result { margin-top: 15px; font-weight: bold; }
+        .quiz-submit-btn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: #141313;
+            color: #fff;
+            border: 1px solid #433c39;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script src="./../controllert.js"></script>
+    <!--side bar --------------------------------------->
+    <div class="nav hidden" id="sidebar">
+        <a href="./../index.html" class="pages">
+            <div class="pagediv">
+                <h1>Home</h1>
+            </div>
+        </a>
+        <a href="./../courses.html" class="pages">
+            <div class="pagediv">
+                <h1>courses</h1>
+            </div>
+        </a>
+    </div>
+    <div class="data" style="margin-top: 40px; border: 1px; border-style: ridge;">
+        <h1 style="text-align:center;">Python Strings</h1>
+        <p style="text-align:center;">Working with text in Python</p>
+        <hr>
+        <h2>Creating Strings</h2>
+        <pre><code>
+s1 = "Hello"
+s2 = 'World'
+s3 = """This is a
+multiline string"""
+        </code></pre>
+        <h2>String Operations</h2>
+        <ul>
+            <li>Concatenation: <code>+</code></li>
+            <li>Repetition: <code>*</code></li>
+            <li>Length: <code>len()</code></li>
+            <li>Indexing: <code>[]</code></li>
+            <li>Slicing: <code>[start:end]</code></li>
+            <li>Membership: <code>in</code></li>
+        </ul>
+        <pre><code>
+greet = "Hello"
+name = "Alice"
+message = greet + ", " + name  # Concatenation
+print(message)  # Hello, Alice
+print(greet * 3)  # HelloHelloHello
+print(len(name))  # 5
+print(name[0])    # A
+print(name[1:4])  # lic
+print("A" in name)  # True
+        </code></pre>
+        <h2>String Methods</h2>
+        <pre><code>
+text = "  python is Fun!  "
+print(text.strip())      # Remove whitespace
+print(text.lower())      # python is fun!
+print(text.upper())      # PYTHON IS FUN!
+print(text.replace("Fun", "Awesome"))  # python is Awesome!
+print(text.find("is"))   # 9
+print(text.startswith("  py")) # True
+print(text.endswith("!  "))    # True
+        </code></pre>
+        <h2>Immutability</h2>
+        <p>Strings cannot be changed after creation. All string methods return new strings.</p>
+        <pre><code>
+s = "hello"
+s2 = s.upper()
+print(s)   # hello
+print(s2)  # HELLO
+        </code></pre>
+        <h2>String Formatting</h2>
+        <pre><code>
+name = "Bob"
+age = 25
+print(f"My name is {name} and I am {age} years old.")
+print("My name is {} and I am {} years old.".format(name, age))
+        </code></pre>
+        <div class="tip"><b>Tip:</b> Use <code>split()</code> and <code>join()</code> to work with words and lists.</div>
+        <pre><code>
+sentence = "one two three"
+words = sentence.split()
+print(words)  # ['one', 'two', 'three']
+joined = "-".join(words)
+print(joined) # one-two-three
+        </code></pre>
+        <hr>
+        <div class="course-nav">
+            <a href="loops.html">&larr; Previous</a>
+            <a href="arrays.html">Next &rarr;</a>
+        </div>
+        <!-- Quiz Section -->
+        <div class="quiz-section">
+            <h2>Quick Quiz: Python Strings</h2>
+            <form id="stringsQuizForm">
+                <div class="quiz-q">
+                    <div>1. How do you create a string in Python?</div>
+                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Using quotes</label><br>
+                    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Using brackets</label><br>
+                    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Using braces</label><br>
+                    <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Using parenthesis</label>
+                </div>
+                <div class="quiz-q">
+                    <div>2. What is the output of <code>print("abc" * 2)</code>?</div>
+                    <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">abcabc</label><br>
+                    <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">abc2</label><br>
+                    <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Error</label><br>
+                    <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">2abc</label>
+                </div>
+                <div class="quiz-q">
+                    <div>3. What does <code>len("hello")</code> return?</div>
+                    <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">4</label><br>
+                    <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">5</label><br>
+                    <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">6</label><br>
+                    <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">Error</label>
+                </div>
+                <div class="quiz-q">
+                    <div>4. What does <code>"abc".upper()</code> return?</div>
+                    <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">abc</label><br>
+                    <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">ABC</label><br>
+                    <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">Abc</label><br>
+                    <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">error</label>
+                </div>
+                <div class="quiz-q">
+                    <div>5. What does <code>"a" in "cat"</code> return?</div>
+                    <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">True</label><br>
+                    <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">False</label><br>
+                    <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">Error</label><br>
+                    <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">None</label>
+                </div>
+                <button type="button" class="quiz-submit-btn" onclick="gradeStringsQuiz()">Submit Answers</button>
+                <div id="quizResultStrings" class="quiz-result"></div>
+            </form>
+        </div>
+    </div>
+    <script>
+    // filepath: /home/z3tr/Documents/pwa/python_courses/strings.html
+    function gradeStringsQuiz() {
+        // correct: q1=a, q2=a, q3=b, q4=b, q5=a
+        let score = 0;
+        if (document.querySelector('input[name="q1"]:checked')?.value === 'a') score++;
+        if (document.querySelector('input[name="q2"]:checked')?.value === 'a') score++;
+        if (document.querySelector('input[name="q3"]:checked')?.value === 'b') score++;
+        if (document.querySelector('input[name="q4"]:checked')?.value === 'b') score++;
+        if (document.querySelector('input[name="q5"]:checked')?.value === 'a') score++;
+        document.getElementById('quizResultStrings').textContent = `Your score: ${score} / 5`;
+    }
+    </script>
+</body>
+</html>
