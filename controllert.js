@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const content = document.createElement("header");
     content.innerHTML = `
         <div style="padding-top: 5px;">
-        <button id="switchBtn" class="imgButton" onclick="swBtn()"><img src=".Z.png" alt="Home" width="41px" style="float: left;padding: 0px 5px;"></BUtton>
+        <button id="switchBtn" class="imgButton" onclick="swBtn()"><img src="Z.png" alt="Home" width="41px" style="float: left;padding: 0px 5px;"></BUtton>
         <a href="login.html" class="page-button">login</a>
         <a href="register.html" class="page-button">register</a>
 
