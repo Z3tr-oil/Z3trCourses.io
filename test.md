@@ -1,12 +1,10 @@
-<style>
-    div{
-        background-color: red;
-        left: 0;
-        height: 100px;
-        width: 50px;
-    }
-</style>
+# Markdown with a Styled Side Div
 
-<div>
-  # hiiiiiiii
+This is regular Markdown text.
+
+<div style="background-color: lightblue; padding: 1em; width: 300px; float: right; margin: 1em;">
+  <strong>Side Box</strong><br>
+  This is a custom-styled box using HTML inside Markdown.
 </div>
+
+More content here that wraps around the box.
